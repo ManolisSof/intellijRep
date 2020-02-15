@@ -28,7 +28,7 @@ public class FirstPass {
 //        });
 
         // Read the file and create a tuple with 2 attributes: City_Name, Measurement
-        DataSet<Tuple2<String, Float>> csvInput = env.readTextFile("openaq_kabul.csv")
+        DataSet<Tuple2<String, Float>> csvInput = env.readTextFile("openaq.csv")
                 .map(new MapFunction<String, Tuple2<String, Float>>() {
                     @Override
                     public Tuple2<String, Float> map(String value) throws Exception {
